@@ -1,0 +1,302 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem 1.25rem;
+    color: white;
+    border: 2px solid  #8B4513; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin:  1rem auto; 
+    transition: background-color 0.5s ease; 
+position: relative;
+    background: linear-gradient(
+        to right, 
+        #A0522D, /* SaddleBrown */
+        #8B4513, /* Sienna */
+        #D2B48C, /* Tan */
+        #5C4033  /* Dark Brown */
+    );
+}
+
+.navbar:hover{
+    background-color:white;
+    color: #17120e;
+    background: none;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    text-transform: uppercase; /* Uppercase for a sleek look */
+    letter-spacing: 2px; /* Add space between letters */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    background: linear-gradient(90deg, white,white); /* Gradient from green to white */
+    -webkit-background-clip: text;
+    color: transparent; /* Make the text transparent to show the gradient */
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img{
+    width: 10%;
+    height: auto;
+    align-self: center;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.logo:hover {
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+
+}
+
+.navbar:hover .logo{
+    
+ background: #695850;
+ -webkit-background-clip: text;
+ color: transparent; /* Make the text transparent to show the gradient */
+}
+.navlinks{
+    display: flex;
+    gap: 1rem;
+    
+}
+.navlinks a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bolder;
+    display: flex;
+    gap: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+
+/* Nav links color when navbar changes background */
+.navbar:hover .navlinks a {
+    color: #695850; /* Green text on white background */
+}
+
+/* Nav links hover effect */
+.navlinks a:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Light background on hover */
+    
+}
+
+
+
+.hamburger {
+    display: none; 
+    background:none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease; 
+    z-index: 10;
+}
+
+
+
+
+/* Hamburger hover */
+.hamburger:hover {
+    color: #695850; /* Green icon on hover */
+}
+
+
+
+/*hero*/
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    min-height: 90vh;
+    background: linear-gradient(
+        to right, 
+        white, /* SaddleBrown */
+        white, /* Sienna */
+        white, /* Sienna */
+        white /* Dark Brown */
+    );
+
+}
+
+.hero-content{
+    max-width: 50%;
+}
+
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 1.2rem;
+    line-height: 4.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(90deg, #A0522D,gold); /* Gradient from green to white */
+    -webkit-background-clip: text;
+    color: transparent; /* Make the text transparent to show the gradient */
+}
+
+
+
+.hero-content p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+
+.cta-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(87, 138, 87);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    line-height: 1rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+
+.cta-btn:hover {
+    background-color: #A0522D;
+}  /* SaddleBrown */
+        
+
+.hero-image{
+    max-width: 45%;
+    height: auto;
+    
+
+}
+
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+
+}
+
+.side-image img{
+    position: absolute;
+    max-width: 25%;
+    right: 36%;
+    height: auto;
+    top: 65%;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger on small screens */
+        color:#695850;
+    }
+
+    .navbar{
+        background-color: white;
+        color: #5C4033;
+        background: none;
+    }
+
+    
+.logo{
+    
+    background: linear-gradient(90deg, #5C4033,#695850);
+    -webkit-background-clip: text;
+    color: transparent; /* Make the text transparent to show the gradient */
+   }
+
+    .navlinks {
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 1rem;
+        width: 100%; /* Full-width dropdown */
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin-top: 2.5rem;
+        background-color: white;
+    }
+
+    .navlinks.active {
+        display: flex; /* Show links when active */
+    }
+
+    .navlinks a {
+        padding: 0.5rem;
+        text-decoration: none;
+        color: #A0522D;
+    }
+    .logo-container{
+        display: flex;
+    
+    }
+    img{
+        width: 10%;
+        height: auto;
+        align-self: center;
+        object-fit: contain;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        background: white;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .hero-image {
+        max-width: 80%;
+    }
+
+    .side-image img{
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+    .logo{
+        font-size: 20px;
+    }
+}
